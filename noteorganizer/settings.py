@@ -27,10 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-mex3aknj+(w&uv_$sk%9k
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
-ALLOWED_HOSTS.append('8000-lsverry-noteorganizer-pfk8mj1pyxi.ws-eu114.gitpod.io')
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-lsverry-noteorganizer-pfk8mj1pyxi.ws-eu114.gitpod.io'
-]
+ALLOWED_HOSTS.append('noteorganizer.herokuapp.com')
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://noteorganizer.herokuapp.com').split(',')
 
 # Application definition
 
