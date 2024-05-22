@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import os 
+from decouple import Config
 import dj_database_url
 from pathlib import Path
 
@@ -20,15 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
+config = Config()
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-mex3aknj+(w&uv_$sk%9k(%gb0^c@56@#)890_xo+(@)&y^cq=')
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-mex3aknj+(w&uv_$sk%9k(%gb0^c@56@#)890_xo+(@)&y^cq=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
-ALLOWED_HOSTS.append('noteorganizer-97ca6970bcf3.herokuapp.com')
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://noteorganizer-97ca6970bcf3.herokuapp.com').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
+
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='https://noteorganizer-97ca6970bcf3.herokuapp.com').split(',')
 
 # Application definition
 
