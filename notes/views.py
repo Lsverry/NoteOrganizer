@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Note
 from .forms import NoteForm
@@ -6,12 +7,15 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 
+
 # Create your views here.
+
 
 from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
 
 
 def register(request):
@@ -26,16 +30,19 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 
+
 @login_required
 def note_list(request):
     notes = Note.objects.filter(user=request.user)
     return render(request, 'notes/note_list.html', {'notes': notes})
 
 
+
 @login_required
 def note_detail(request, id):
     note = get_object_or_404(Note, id=id, user=request.user)
     return render(request, 'notes/note_detail.html', {'note': note})
+
 
 
 @login_required
@@ -52,6 +59,7 @@ def note_create(request):
     return render(request, 'notes/note_form.html', {'form': form})
 
 
+
 @login_required
 def note_update(request, id):
     note = get_object_or_404(Note, id=id, user=request.user)
@@ -65,6 +73,7 @@ def note_update(request, id):
     return render(request, 'notes/note_form.html', {'form': form})
 
 
+
 @login_required
 def note_delete(request, id):
     note = get_object_or_404(Note, id=id, user=request.user)
@@ -72,3 +81,15 @@ def note_delete(request, id):
         note.delete()
         return redirect('note_list')
     return render(request, 'notes/note_confirm_delete.html', {'note': note})
+
+
+
+def search_notes(request):
+    query = request.GET.get('q')
+    results = []
+    if query:
+        results = Note.objects.filter(
+            Q(title__icontains=query) | Q(content__icontains=query),
+            user=request.user
+        )
+    return render(request, 'notes/search_results.html', {'results': results, 'query': query})
