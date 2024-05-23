@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+<form method="GET" action="{% url 'search_notes' %}" class="form-inline">
+    <input type="text" name="q" value="{{ query }}" placeholder="Search notes" class="form-control mb-2 mr-sm-2">
+    <button type="submit" class="btn btn-primary mb-2">Search</button>
+</form>
+<ul class="list-group mt-3">
+    {% for note in results %}
+        <li class="list-group-item">
+            <a href="{% url 'note_detail' note.id %}">{{ note.title }}</a>
+        </li>
+    {% empty %}
+        <li class="list-group-item">No notes found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
