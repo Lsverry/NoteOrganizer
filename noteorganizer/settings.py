@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-from decouple import Config
+from decouple import config
 import dj_database_url
 from pathlib import Path
 
@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-config = Config()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-mex3aknj+(w&uv_$sk%9k(%gb0^c@56@#)890_xo+(@)&y^cq=')
@@ -61,7 +60,7 @@ ROOT_URLCONF = 'noteorganizer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'notes' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
