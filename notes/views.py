@@ -85,7 +85,7 @@ def note_delete(request, id):
 
 
 def search_notes(request):
-    query = request.GET.get('q')
+    query = request.GET.get('q', '')
     results = []
     if query:
         results = Note.objects.filter(
