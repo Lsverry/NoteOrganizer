@@ -5,6 +5,7 @@ from .forms import NoteForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib import messages
 
 
 
@@ -53,6 +54,7 @@ def note_create(request):
             note = form.save(commit=False)
             note.user = request.user
             note.save()
+            messages.success(request, 'Note created successfully.')
             return redirect('note_list')
     else:
         form = NoteForm()
@@ -67,6 +69,7 @@ def note_update(request, id):
         form = NoteForm(request.POST, instance=note)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Note updated successfully.')
             return redirect('note_list')
     else:
         form = NoteForm(instance=note)
@@ -79,6 +82,7 @@ def note_delete(request, id):
     note = get_object_or_404(Note, id=id, user=request.user)
     if request.method == 'POST':
         note.delete()
+        messages.success(request, 'Note deleted successfully.')
         return redirect('note_list')
     return render(request, 'notes/note_confirm_delete.html', {'note': note})
 
