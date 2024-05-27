@@ -8,18 +8,15 @@ from django.contrib.auth import login
 from django.contrib import messages
 
 
-
-# Create your views here.
-
-
-from django.shortcuts import render
-
+# View for the index page
 def index(request):
+    """Render the index page."""
     return render(request, 'index.html')
 
 
-
+# View for user registration
 def register(request):
+    """Handle user registration."""
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -31,23 +28,26 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 
-
+# View to list all notes for the logged-in user
 @login_required
 def note_list(request):
+    """Display a list of notes for the logged-in user."""
     notes = Note.objects.filter(user=request.user)
     return render(request, 'notes/note_list.html', {'notes': notes})
 
 
-
+# View to display the details of a specific note
 @login_required
 def note_detail(request, id):
+    """Display the details of a specific note."""
     note = get_object_or_404(Note, id=id, user=request.user)
     return render(request, 'notes/note_detail.html', {'note': note})
 
 
-
+# View to create a new note
 @login_required
 def note_create(request):
+    """Create a new note."""
     if request.method == 'POST':
         form = NoteForm(request.POST)
         if form.is_valid():
@@ -61,9 +61,10 @@ def note_create(request):
     return render(request, 'notes/note_form.html', {'form': form})
 
 
-
+# View to update an existing note
 @login_required
 def note_update(request, id):
+    """Update an existing note."""
     note = get_object_or_404(Note, id=id, user=request.user)
     if request.method == 'POST':
         form = NoteForm(request.POST, instance=note)
@@ -76,9 +77,10 @@ def note_update(request, id):
     return render(request, 'notes/note_form.html', {'form': form})
 
 
-
+# View to delete an existing note
 @login_required
 def note_delete(request, id):
+    """Delete an existing note."""
     note = get_object_or_404(Note, id=id, user=request.user)
     if request.method == 'POST':
         note.delete()
@@ -87,8 +89,9 @@ def note_delete(request, id):
     return render(request, 'notes/note_confirm_delete.html', {'note': note})
 
 
-
+# View to search for notes
 def search_notes(request):
+    """Search for notes by title or content."""
     query = request.GET.get('q', '')
     results = []
     if query:
