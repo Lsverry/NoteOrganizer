@@ -80,4 +80,32 @@ In addition to automated tests, the following manual tests have been performed t
 
 3. **Responsiveness**
    - Verification of proper display and functionality of the application on different devices and screen sizes.
+
+### Frameworks and Tools Used
+
+- **Django's Testing Framework**: Used for implementing and running automated tests.
+
+### Running the Tests
+
+To run the automated tests, follow these steps:
+
+1. **Set up the environment**:
+    Ensure that all dependencies are installed and the database is migrated.
+    ```bash
+    pip install -r requirements.txt
+    python manage.py migrate
+    ```
+
+2. **Run the tests**:
+    ```bash
+    python manage.py test
+    ```
+
+### Test Coverage
+
+- Models: Verification of the Note model creation.
+- Views: Verification of CRUD operations and search functionality for notes.
+- Authentication: Verification of user registration, login, and protected access
+
+
 ## Deployment
