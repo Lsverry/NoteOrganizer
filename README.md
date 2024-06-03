@@ -17,8 +17,26 @@ Note Organizer is a web application designed to help users create, view, edit, a
 - **Django**
 - **Bootstrap**
 
+## User Stories
+The following user stories were used to guide the development of the Note Organizer application:
+
+1. **User Registration**: As a user I can register so that I can access the application.
+2. **User Login**: As a user I can log in so that I can access my notes.
+3. **Create Note**: As a user I can create a new note so that I can save important information.
+4. **Note Detail View**: As a user I can view the details of a note so that I can read its content.
+5. **Edit Note**: As a user I can edit an existing note so that I can update its content.
+6. **Delete Note**: As a user I can delete a note that I no longer need.
+7. **Search Notes**: As a user I can search for notes so that I can quickly find specific information.
+
+These user stories are also documented and tracked in the agile tool, GitHub Projects.
+
 ## UX Design Documentation
-## wireframes
+#### Entity Relationship Diagram
+This application uses a relational database to store user information and notes. The main models are User and Note.
+
+![Entity Relationship Diagram]()
+
+### wireframes
 1. **Home Page Wireframe**:
     - **Description**: This wireframe shows the initial structure of the home page, including the navigation bar, register button, and login button.
     - ![Home Page Wireframe]()
@@ -31,7 +49,7 @@ Note Organizer is a web application designed to help users create, view, edit, a
     - **Description**: This wireframe shows the detail page for a specific note, with options to edit or delete the note.
     - ![Note Detail Wireframe]()
 
-## Design Rationale
+### Design Rationale
 
 1. **Interface Consistency**:
     - **Description**: The user interface has been designed to maintain a consistent look and feel throughout the application. This includes the use of consistent colors, fonts, and styles to enhance usability and user experience.
@@ -42,7 +60,7 @@ Note Organizer is a web application designed to help users create, view, edit, a
 3. **Accessibility**:
     - **Description**: The design has considered accessibility guidelines to ensure that all users, including those with disabilities, can use the application effectively.
 
-## Implementation
+### Implementation
 
 1. **Following Wireframes**:
     - **Description**: Wireframes have been closely followed during development to ensure the final product aligns with the initial design vision.
@@ -109,3 +127,14 @@ To run the automated tests, follow these steps:
 
 
 ## Deployment
+
+### Heroku
+
+- The App live link is: 
+- The project was deployed to Heroku using the following steps.
+
+1. Log in to Heroku and create an App.
+2. At the Deploy tab, select GitHub as the deployment method.
+3. Select your repository name and click Search. Once it is found, click Connect.
+4. Select the branch you want to deploy, then click Deploy Branch.
+5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
