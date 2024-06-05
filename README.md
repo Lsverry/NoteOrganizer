@@ -9,13 +9,6 @@ Note Organizer is a web application designed to help users create, view, edit, a
 - User authentication and authorization
 - Responsive design
 
-## Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **Python**
-- **Django**
-- **Bootstrap**
 
 ## User Stories
 The following user stories were used to guide the development of the Note Organizer application:
@@ -31,44 +24,91 @@ The following user stories were used to guide the development of the Note Organi
 These user stories are also documented and tracked in the agile tool, GitHub Projects.
 
 ## UX Design Documentation
-#### Entity Relationship Diagram
+
+### Entity Relationship Diagram
 This application uses a relational database to store user information and notes. The main models are User and Note.
 
-![Entity Relationship Diagram]()
+![Entity Relationship Diagram](assets/images/Entity%20diagram.png)
 
-### wireframes
+### Wireframes
 1. **Home Page Wireframe**:
     - **Description**: This wireframe shows the initial structure of the home page, including the navigation bar, register button, and login button.
-    - ![Home Page Wireframe]()
+    - ![Home Page Wireframe](assets/images/Home%20wireframe.png)
 
 2. **Notes List Wireframe**:
     - **Description**: This wireframe illustrates the page where users can view a list of their notes. It includes buttons to create, edit, and delete notes.
-    - ![Notes List Wireframe]()
+    - ![Notes List Wireframe](assets/images/Note%20list%20wireframe.png)
 
 3. **Note Detail Wireframe**:
     - **Description**: This wireframe shows the detail page for a specific note, with options to edit or delete the note.
-    - ![Note Detail Wireframe]()
+    - ![Note Detail Wireframe](assets/images/search%20wireframe.png)
+
+### screenshots
+
+These are the screenshots of the finished project:
+
+1. **Home Page**
+2. **Notes List**
+3. **Note Detail**
+4. **Registration Form**
+5. **Log In Form**
 
 ### Design Rationale
-
 1. **Interface Consistency**:
-    - **Description**: The user interface has been designed to maintain a consistent look and feel throughout the application. This includes the use of consistent colors, fonts, and styles to enhance usability and user experience.
+    - The user interface has been designed to maintain a consistent look and feel throughout the application. This includes the use of consistent colors, fonts, and styles to enhance usability and user experience.
 
 2. **Ease of Use**:
-    - **Description**: Ease of use has been prioritized, ensuring that the main actions (creating, editing, and deleting notes) are easily accessible and understandable for users.
+    - Ease of use has been prioritized, ensuring that the main actions (creating, editing, and deleting notes) are easily accessible and understandable for users.
 
 3. **Accessibility**:
-    - **Description**: The design has considered accessibility guidelines to ensure that all users, including those with disabilities, can use the application effectively.
+    - The design has considered accessibility guidelines to ensure that all users, including those with disabilities, can use the application effectively.
 
 ### Implementation
-
 1. **Following Wireframes**:
-    - **Description**: Wireframes have been closely followed during development to ensure the final product aligns with the initial design vision.
+    - Wireframes have been closely followed during development to ensure the final product aligns with the initial design vision.
 
 2. **Technical Implementation**:
-    - **Description**: The technical implementation has adhered to the established design principles, ensuring the user interface is intuitive and easy to use.
+    - The technical implementation has adhered to the established design principles, ensuring the user interface is intuitive and easy to use.
+
+## Technologies Used
+
+### Languages Used
+- **HTML5**
+- **CSS3**
+- **Python**
+
+### Frameworks and Libraries
+- **Django**
+- **Bootstrap**
+- **Django Allauth**
+- **Whitenoise**
+- **dj-database-url**
+- **python-decouple**
+- **gunicorn**
+- **psycopg2**
+
+## Tools and Programs
+- **Git**
+- **GitHub**
+- **GitHub Projects**
+- **Heroku**
+- **VS Code**
+- **PostgreSQL**
+- **SQLite**
+- **Draw.io**
 
 ## Testing
+### Performance
+The performance was tested with Lighthouse in the developer tools, and the results are as follows:
+
+### Code Validation
+#### HTML
+The HTML code was checked with the W3C Markup Validator.
+
+#### CSS
+The CSS code was checked with the W3C CSS Validator.
+
+#### Python
 
 ### Automated Testing
 The following automated tests have been implemented and passed using Django's testing framework:
@@ -100,11 +140,9 @@ In addition to automated tests, the following manual tests have been performed t
    - Verification of proper display and functionality of the application on different devices and screen sizes.
 
 ### Frameworks and Tools Used
-
 - **Django's Testing Framework**: Used for implementing and running automated tests.
 
 ### Running the Tests
-
 To run the automated tests, follow these steps:
 
 1. **Set up the environment**:
@@ -120,16 +158,14 @@ To run the automated tests, follow these steps:
     ```
 
 ### Test Coverage
-
 - Models: Verification of the Note model creation.
 - Views: Verification of CRUD operations and search functionality for notes.
-- Authentication: Verification of user registration, login, and protected access
+- Authentication: Verification of user registration, login, and protected access.
 
 
 ## Deployment
 
 ### Heroku
-
 - The App live link is: 
 - The project was deployed to Heroku using the following steps.
 
@@ -138,3 +174,12 @@ To run the automated tests, follow these steps:
 3. Select your repository name and click Search. Once it is found, click Connect.
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+
+## Future Implementations
+- Improve the search functionality to include advanced search options.
+- Add a feature for users to categorize their notes.
+- Enhance the user interface for a more modern look and feel.
+- Implement additional security features for user data protection.
+
+## Credits
+- **Acknowledgements**: Special thanks to the Django and Bootstrap communities for their excellent documentation and resources.
