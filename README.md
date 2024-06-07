@@ -33,15 +33,15 @@ This application uses a relational database to store user information and notes.
 ### Wireframes
 1. **Home Page Wireframe**:
     - **Description**: This wireframe shows the initial structure of the home page, including the navigation bar, register button, and login button.
-    - ![Home Page Wireframe](assets/images/Home%20wireframe.png)
+    ![Home Page Wireframe](assets/images/Home%20wireframe.png)
 
 2. **Notes List Wireframe**:
     - **Description**: This wireframe illustrates the page where users can view a list of their notes. It includes buttons to create, edit, and delete notes.
-    - ![Notes List Wireframe](assets/images/Note%20list%20wireframe.png)
+    ![Notes List Wireframe](assets/images/Note%20list%20wireframe.png)
 
 3. **Note Detail Wireframe**:
     - **Description**: This wireframe shows the detail page for a specific note, with options to edit or delete the note.
-    - ![Note Detail Wireframe](assets/images/search%20wireframe.png)
+    ![Note Detail Wireframe](assets/images/search%20wireframe.png)
 
 ### screenshots
 
@@ -109,6 +109,9 @@ The HTML code was checked with the W3C Markup Validator.
 The CSS code was checked with the W3C CSS Validator.
 
 #### Python
+
+### JavaScript
+This project does not include custom JavaScript.
 
 ### Automated Testing
 The following automated tests have been implemented and passed using Django's testing framework:
