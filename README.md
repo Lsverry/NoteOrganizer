@@ -39,19 +39,50 @@ This application uses a relational database to store user information and notes.
     - **Description**: This wireframe illustrates the page where users can view a list of their notes. It includes buttons to create, edit, and delete notes.
     ![Notes List Wireframe](assets/images/Note%20list%20wireframe.png)
 
-3. **Note Detail Wireframe**:
-    - **Description**: This wireframe shows the detail page for a specific note, with options to edit or delete the note.
-    ![Note Detail Wireframe](assets/images/search%20wireframe.png)
+3. **Create Note Wireframe**:
+    - **Description**: This wireframe shows the notes creation page, with a text field for the title, a text field for the content and a save button.
+    ![Create Note Wireframe](assets/images/Create%20note%20wireframe.png)
+
+3. **Edit Note Wireframe**:
+    - **Description**: This wireframe shows the notes edit page, with a text field for the title, a text field for the content and a save button.
+    ![Edit Note Wireframe](assets/images/Note%20edit%20wireframe.png)
+
+4. **Search Notes Wireframe**:
+    - **Description**: This wireframe shows the note search page, with a text field and a button to search for notes.
+    ![Search Notes Wireframe](assets/images/search%20wireframe.png)
+
+5. **Note detail Wireframe**:
+    - **Description**: This wireframe illustrates the notes detail page, with a button to edit it and a button to return to the notes list.
+    ![Note detail Wireframe](assets/images/Note%20detail%20wireframe.png)
 
 ### screenshots
 
 These are the screenshots of the finished project:
 
 1. **Home Page**
+    - **Description**: This is the main page of the Note Organizer application. Users can browse to view their notes or sign up for a new account.
+    ![Home Page](assets/images/main%20screenshot.png)
 2. **Notes List**
-3. **Note Detail**
-4. **Registration Form**
-5. **Log In Form**
+    - **Description**: This page displays a list of all notes created by the logged-in user. Users can view, edit, or delete their notes from this page.
+    ![Notes List](assets/images/Note%20List%20screenshot%202.png)
+3. **Create Note**
+    - **Description**: The note creation page where users can enter a title and content for a new note. The form includes input fields for the title and content, and a save button to submit the new note.
+    ![Create note](assets/images/Create%20screenshot%202.png)
+4. **Edit Note**
+    - **Description**: This page allows users to edit an existing note. It pre-fills the form with the current title and content of the note. Users can make changes and save them.
+    ![Edit note](assets/images/edit%20note%20screenshot%202.png)
+5. **Search Notes**
+    - **Description**: The search page enables users to search for notes by keywords. It includes a search input field and a button to initiate the search.
+    ![Search Notes](assets/images/Search%20screenshot.png)
+6. **Registration Form**
+    - **Description**: The user registration form where new users can create an account by providing a username and password. It includes input fields for the required information and a submit button to complete the registration.
+    ![Registration Form](assets/images/Register%20screenshot.png)
+7. **Log In Form**
+    - **Description**: The login form for returning users to access their accounts. It includes input fields for the username and password, along with a login button.
+    ![Log in form](assets/images/Login%20screenshot.png)
+8. **Note Detail**
+    - **Description**: This page displays the details of a specific note. Users can see the title and content of the note, and have options to edit the note or go back to the list of notes.
+    ![Note Detail](assets/images/NoteName%20screenshot.png)
 
 ### Design Rationale
 1. **Interface Consistency**:
@@ -96,6 +127,7 @@ These are the screenshots of the finished project:
 - **PostgreSQL**
 - **SQLite**
 - **Draw.io**
+- **figma**
 
 ## Testing
 ### Performance
