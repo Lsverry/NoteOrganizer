@@ -2,15 +2,19 @@
 
 {% block content %}
 <h1>Search Results</h1>
+<!-- Form to perform the search query -->
 <form method="GET" action="{% url 'search_notes' %}" class="form-inline">
     <input type="text" name="q" value="{{ query }}" placeholder="Search notes" class="form-control mb-2 mr-sm-2">
     <button type="submit" class="btn btn-primary mb-2">Search</button>
 </form>
 <ul class="list-group mt-3">
+    <!-- Loop through the search results and display each note -->
     {% for note in results %}
         <li class="list-group-item">
+            <!-- Link to the detail view of the note -->
             <a href="{% url 'note_detail' note.id %}">{{ note.title }}</a>
         </li>
+    <!-- Display message if no notes are found -->
     {% empty %}
         <li class="list-group-item">No notes found.</li>
     {% endfor %}

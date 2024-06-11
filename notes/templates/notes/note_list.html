@@ -2,17 +2,24 @@
 
 {% block content %}
 <h1>My Notes</h1>
+<!-- Button to create a new note -->
 <a href="{% url 'note_create' %}" class="btn btn-success mb-3">Create New Note</a>
+<!-- Unordered list to display notes -->
 <ul class="list-group">
+    <!-- Loop through each note in the notes list -->
     {% for note in notes %}
+        <!-- List item for each note with a link to view the note detail -->
         <li class="list-group-item">
             <a href="{% url 'note_detail' note.id %}">{{ note.title }}</a>
             <span class="float-right">
+                <!-- Button to edit the note -->
                 <a href="{% url 'note_update' note.id %}" class="btn btn-primary btn-sm">Edit</a>
+                <!-- Button to delete the note -->
                 <a href="{% url 'note_delete' note.id %}" class="btn btn-danger btn-sm">Delete</a>
             </span>
         </li>
     {% empty %}
+        <!-- Message when no notes are found -->
         <li class="list-group-item">No notes found.</li>
     {% endfor %}
 </ul>

@@ -5,11 +5,13 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Login</h2>
+    <!-- Form for user login -->
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
+    <!-- Link to the registration page for users who don't have an account -->
     <p class="mt-3">
         Don't have an account? <a href="{% url 'register' %}">Register here.</a>
     </p>

@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <!-- Main welcome heading -->
     <h1>Welcome to Note Organizer!</h1>
     {% if user.is_authenticated %}
+        <!-- Button for authenticated users to view notes -->
         <a href="{% url 'note_list' %}" class="btn btn-primary">View Notes</a>
     {% else %}
+        <!-- Buttons for non-authenticated users to view notes or register -->
         <a href="{% url 'note_list' %}" class="btn btn-primary">View Notes</a>
         <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
     {% endif %}

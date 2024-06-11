@@ -3,13 +3,17 @@
 
 {% block content %}
     <div class="container mt-4">
+        <!-- Display the form title, which changes depending on whether a note is being edited or created -->
         <h1>{% if form.instance.id %}Edit Note{% else %}Create Note{% endif %}</h1>
+        <!-- Form to create or edit a note -->
         <form method="post">
             {% csrf_token %}
+            <!-- Form group for the note title -->
             <div class="form-group">
                 <label for="{{ form.title.id_for_label }}">Title</label>
                 {{ form.title|add_class:"form-control" }}
             </div>
+            <!-- Form group for the note content -->
             <div class="form-group">
                 <label for="{{ form.content.id_for_label }}">Content</label>
                 {{ form.content|add_class:"form-control" }}

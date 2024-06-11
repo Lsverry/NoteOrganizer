@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap CSS for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>{% block title %}Note Organizer{% endblock %}</title>
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'index' %}">Note Organizer</a>
         <div class="collapse navbar-collapse">
@@ -16,8 +18,10 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'note_list' %}">My Notes</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
+                <!-- Conditional display based on user authentication status -->
                 {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <!-- Logout form -->
                         <form method="post" action="{% url 'logout' %}">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-link nav-link" style="padding: 0;">Logout</button>
@@ -31,6 +35,7 @@
         </div>
     </nav>
     <div class="container mt-4">
+        <!-- Display messages if there are any -->
         {% if messages %}
             <div class="row">
                 <div class="col-md-12">
@@ -45,9 +50,11 @@
                 </div>
             </div>
         {% endif %}
+        <!-- Block for inserting content from other templates -->
         {% block content %}
         {% endblock %}
     </div>
+    <!-- Scripts for Bootstrap and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
