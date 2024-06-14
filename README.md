@@ -29,6 +29,12 @@ These user stories are also documented and tracked in the agile tool, GitHub Pro
 This application uses a relational database to store user information and notes. The main models are User and Note.
 
 ![Entity Relationship Diagram](assets/images/Entity%20diagram.png)
+### Design
+- Colour Scheme
+    - The main colour used in the project is white.
+
+- Fonts
+    - The fonts used are those predefined by bootstrap.
 
 ### Wireframes
 1. **Home Page Wireframe**:
@@ -110,7 +116,7 @@ These are the screenshots of the finished project:
 
 ### Frameworks and Libraries
 - **Django**
-- **Bootstrap**
+- **Bootstrap 4.5.2**
 - **Django Allauth**
 - **Whitenoise**
 - **dj-database-url**
@@ -197,6 +203,27 @@ To run the automated tests, follow these steps:
 - Views: Verification of CRUD operations and search functionality for notes.
 - Authentication: Verification of user registration, login, and protected access.
 
+### User Stories Testing
+- User Registration: As a user I can register so that I can access the application:
+    - The user can click on Register in the navigation bar or on the home page to create an account with a username and password.
+
+- User Login: As a user I can log in so that I can access my notes:
+    - The user can click on Login in the navbar to access their account by entering their credentials.
+
+- Create Note: As a user I can create a new note so that I can save important information:
+    - The user can click on "Create note" in the "my notes" section to access the note creation form and save a new note.
+
+- Note Detail View: As a user I can view the details of a note so that I can read its content:
+    - The user can click on a note title in the notes list to view its details on a separate page.
+
+- Edit Note: As a user I can edit an existing note so that I can update its content:
+    - The user can click on the "Edit" button on the note detail page to update the note's content.
+
+- Delete Note: As a user I can delete a note that I no longer need:
+    - The user can click on the "Delete" button on the note detail page to remove the note.
+    
+- Search Notes: As a user I can search for notes so that I can quickly find specific information:
+    - The user can enter a keyword in the search bar and click the search button to find notes that contain the keyword in their title or content.
 
 ## Deployment
 
