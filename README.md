@@ -9,7 +9,6 @@ Note Organizer is a web application designed to help users create, view, edit, a
 - User authentication and authorization
 - Responsive design
 
-
 ## User Stories
 The following user stories were used to guide the development of the Note Organizer application:
 
@@ -29,12 +28,13 @@ These user stories are also documented and tracked in the agile tool, GitHub Pro
 This application uses a relational database to store user information and notes. The main models are User and Note.
 
 ![Entity Relationship Diagram](assets/images/Entity%20diagram.png)
+
 ### Design
 - Colour Scheme
     - The main colour used in the project is white.
 
 - Fonts
-    - The fonts used are those predefined by bootstrap.
+    - The fonts used are those predefined by Bootstrap.
 
 ### Wireframes
 1. **Home Page Wireframe**:
@@ -49,43 +49,49 @@ This application uses a relational database to store user information and notes.
     - **Description**: This wireframe shows the notes creation page, with a text field for the title, a text field for the content and a save button.
     ![Create Note Wireframe](assets/images/Create%20note%20wireframe.png)
 
-3. **Edit Note Wireframe**:
+4. **Edit Note Wireframe**:
     - **Description**: This wireframe shows the notes edit page, with a text field for the title, a text field for the content and a save button.
     ![Edit Note Wireframe](assets/images/Note%20edit%20wireframe.png)
 
-4. **Search Notes Wireframe**:
+5. **Search Notes Wireframe**:
     - **Description**: This wireframe shows the note search page, with a text field and a button to search for notes.
     ![Search Notes Wireframe](assets/images/search%20wireframe.png)
 
-5. **Note detail Wireframe**:
+6. **Note Detail Wireframe**:
     - **Description**: This wireframe illustrates the notes detail page, with a button to edit it and a button to return to the notes list.
-    ![Note detail Wireframe](assets/images/Note%20detail%20wireframe.png)
+    ![Note Detail Wireframe](assets/images/Note%20detail%20wireframe.png)
 
-### screenshots
-
+### Screenshots
 These are the screenshots of the finished project:
 
 1. **Home Page**
     - **Description**: This is the main page of the Note Organizer application. Users can browse to view their notes or sign up for a new account.
     ![Home Page](assets/images/main%20screenshot.png)
+
 2. **Notes List**
     - **Description**: This page displays a list of all notes created by the logged-in user. Users can view, edit, or delete their notes from this page.
     ![Notes List](assets/images/Note%20List%20screenshot%202.png)
+
 3. **Create Note**
     - **Description**: The note creation page where users can enter a title and content for a new note. The form includes input fields for the title and content, and a save button to submit the new note.
-    ![Create note](assets/images/Create%20screenshot%202.png)
+    ![Create Note](assets/images/Create%20screenshot%202.png)
+
 4. **Edit Note**
     - **Description**: This page allows users to edit an existing note. It pre-fills the form with the current title and content of the note. Users can make changes and save them.
-    ![Edit note](assets/images/edit%20note%20screenshot%202.png)
+    ![Edit Note](assets/images/edit%20note%20screenshot%202.png)
+
 5. **Search Notes**
     - **Description**: The search page enables users to search for notes by keywords. It includes a search input field and a button to initiate the search.
     ![Search Notes](assets/images/Search%20screenshot.png)
+
 6. **Registration Form**
     - **Description**: The user registration form where new users can create an account by providing a username and password. It includes input fields for the required information and a submit button to complete the registration.
     ![Registration Form](assets/images/Register%20screenshot.png)
+
 7. **Log In Form**
     - **Description**: The login form for returning users to access their accounts. It includes input fields for the username and password, along with a login button.
-    ![Log in form](assets/images/Login%20screenshot.png)
+    ![Log In Form](assets/images/Login%20screenshot.png)
+
 8. **Note Detail**
     - **Description**: This page displays the details of a specific note. Users can see the title and content of the note, and have options to edit the note or go back to the list of notes.
     ![Note Detail](assets/images/NoteName%20screenshot.png)
@@ -134,6 +140,7 @@ These are the screenshots of the finished project:
 - **SQLite**
 - **Draw.io**
 - **figma**
+- **Pylint**
 
 ## Testing
 ### Performance
@@ -147,7 +154,8 @@ The HTML code was validated using the [W3C Markup Validator](https://validator.w
 No custom CSS was used in this project. All styling is provided by Bootstrap.
 
 #### Python
-The Python code was checked for syntax errors and adhered to PEP8 guidelines.
+The Python code was checked with Pylint to ensure it adheres to the coding standards. The Pylint score achieved was 10.00/10, indicating no issues were found in the code.
+![Pylint](assets/images/pylint%20rate.png)
 
 ### JavaScript
 This project does not include custom JavaScript.
@@ -205,26 +213,49 @@ To run the automated tests, follow these steps:
 - Authentication: Verification of user registration, login, and protected access.
 
 ### User Stories Testing
-- User Registration: As a user I can register so that I can access the application:
+- **User Registration**: As a user I can register so that I can access the application:
     - The user can click on Register in the navigation bar or on the home page to create an account with a username and password.
 
-- User Login: As a user I can log in so that I can access my notes:
+- **User Login**: As a user I can log in so that I can access my notes:
     - The user can click on Login in the navbar to access their account by entering their credentials.
 
-- Create Note: As a user I can create a new note so that I can save important information:
+- **Create Note**: As a user I can create a new note so that I can save important information:
     - The user can click on "Create note" in the "my notes" section to access the note creation form and save a new note.
 
-- Note Detail View: As a user I can view the details of a note so that I can read its content:
+- **Note Detail View**: As a user I can view the details of a note so that I can read its content:
     - The user can click on a note title in the notes list to view its details on a separate page.
 
-- Edit Note: As a user I can edit an existing note so that I can update its content:
+- **Edit Note**: As a user I can edit an existing note so that I can update its content:
     - The user can click on the "Edit" button on the note detail page to update the note's content.
 
-- Delete Note: As a user I can delete a note that I no longer need:
+- **Delete Note**: As a user I can delete a note that I no longer need:
     - The user can click on the "Delete" button on the note detail page to remove the note.
     
-- Search Notes: As a user I can search for notes so that I can quickly find specific information:
+- **Search Notes**: As a user I can search for notes so that I can quickly find specific information:
     - The user can enter a keyword in the search bar and click the search button to find notes that contain the keyword in their title or content.
+
+## Known Bugs
+
+### Resolved Bugs
+
+1. **Logout not working correctly**:
+    - **Description**: Initially, the logout functionality was causing a 405 error due to incorrect URL pattern and template settings.
+    - **Solution**: The URL pattern was corrected and the template settings were properly configured to handle logout requests.
+
+2. **Form field alignment issues**:
+    - **Description**: Form fields for creating and editing notes were not aligned properly.
+    - **Solution**: Custom template tags were created to add CSS classes to form fields for proper alignment.
+
+3. **Display of note content**:
+    - **Description**: When viewing the details of a note, line breaks in the note content were not being displayed correctly.
+    - **Solution**: The `linebreaks` filter was used in the template to preserve line breaks in note content.
+
+4. **Registration button visible when logged in**:
+    - **Description**: The registration button was still visible in the navigation bar even when the user was logged in.
+    - **Solution**: Added conditional logic in the base template to hide the registration button when the user is authenticated.
+
+### Unfixed Bugs
+No unfixed bugs.
 
 ## Deployment
 
@@ -278,6 +309,7 @@ To run the automated tests, follow these steps:
     ```bash
     python manage.py runserver
     ```
+
 ## Future Implementations
 - Improve the search functionality to include advanced search options.
 - Add a feature for users to categorize their notes.

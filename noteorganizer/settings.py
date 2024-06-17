@@ -9,10 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from pathlib import Path
 from decouple import config
 import dj_database_url
-from pathlib import Path
 from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,14 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-mex3aknj+(w&uv_$sk%9k(%gb0^c@56@#)890_xo+(@)&y^cq=')
+SECRET_KEY = config('SECRET_KEY',
+default='django-insecure-mex3aknj+(w&uv_$sk%9k(%gb0^c@56@#)890_xo+(@)&y^cq=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
 
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='https://noteorganizer-97ca6970bcf3.herokuapp.com').split(',')
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS',
+default='https://noteorganizer-97ca6970bcf3.herokuapp.com').split(',')
 
 # Application definition
 
