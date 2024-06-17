@@ -141,12 +141,13 @@ The performance was tested with Lighthouse in the developer tools, and the resul
 
 ### Code Validation
 #### HTML
-The HTML code was checked with the W3C Markup Validator.
+The HTML code was validated using the [W3C Markup Validator](https://validator.w3.org/). The validator reported errors related to Django template tags (e.g., `{% block content %}`, `{% url 'note_list' %}`). These errors are expected and do not affect the functionality of the site as they are specific to Django's templating language.
 
 #### CSS
-The CSS code was checked with the W3C CSS Validator.
+No custom CSS was used in this project. All styling is provided by Bootstrap.
 
 #### Python
+The Python code was checked for syntax errors and adhered to PEP8 guidelines.
 
 ### JavaScript
 This project does not include custom JavaScript.
@@ -237,6 +238,46 @@ To run the automated tests, follow these steps:
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
+### Fork the Repository
+1. Log in to GitHub: Ensure you are logged in to your GitHub account.
+2. Navigate to the Original Repository: Go to the original repository of the project you want to fork.
+3. Fork the Repository:
+    - In the top right corner of the repository page, click the Fork button.
+    - GitHub will create a copy of the repository under your account.
+4. Verify the Fork: Once the fork is complete, you will be redirected to the copy of the repository in your GitHub account.
+
+### Clone the Repository
+1. Navigate to Your Forked Repository: Go to the forked repository in your GitHub account.
+2. Get the Repository URL:
+    - Click on the green Code button.
+    - Copy the repository URL. 
+3. Open Terminal or Command Prompt: Open your terminal (macOS, Linux) or command prompt (Windows).
+4. Clone the Repository:
+    - Navigate to the directory where you want to clone the repository.
+    - Run the following command, replacing REPOSITORY_URL with the URL you copied:
+    ```bash
+    git clone REPOSITORY_URL
+    ```
+5. Navigate to the Project Directory:
+    - After the repository is cloned, navigate to the project directory:
+    ```bash
+    cd repository_name
+    ```
+6. Install Dependencies:
+    - Ensure you have all necessary dependencies installed. You can do this by running:
+    ```bash
+    pip install -r requirements.txt
+    ```
+7. Migrate the Database:
+    - Run migrations to set up the database:
+    ```bash
+    python manage.py migrate
+    ```
+8. Run the Server:
+    - Start the Django development server:
+    ```bash
+    python manage.py runserver
+    ```
 ## Future Implementations
 - Improve the search functionality to include advanced search options.
 - Add a feature for users to categorize their notes.
