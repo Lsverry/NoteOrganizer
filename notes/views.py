@@ -90,6 +90,7 @@ def note_delete(request, id):
 
 
 # View to search for notes
+@login_required
 def search_notes(request):
     """Search for notes by title or content."""
     query = request.GET.get('q', '')
