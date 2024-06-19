@@ -11,7 +11,11 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'index' %}">Note Organizer</a>
-        <div class="collapse navbar-collapse">
+        <!-- Button for collapsing the navbar in smaller screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'search_notes' %}">Search Notes</a></li>
@@ -22,7 +26,7 @@
                 {% if user.is_authenticated %}
                     <li class="nav-item">
                         <!-- Logout form -->
-                        <form method="post" action="{% url 'logout' %}">
+                        <form method="post" action="{% url 'logout' %}" class="form-inline">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-link nav-link" style="padding: 0;">Logout</button>
                         </form>
