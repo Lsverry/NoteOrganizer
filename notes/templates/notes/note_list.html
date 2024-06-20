@@ -10,7 +10,7 @@
     {% for note in notes %}
         <!-- List item for each note with a link to view the note detail -->
         <li class="list-group-item">
-            <a href="{% url 'note_detail' note.id %}">{{ note.title }}</a>
+            <a href="{% url 'note_detail' note.id %}" class="note-link">{{ note.title }}</a>
             <span class="float-right">
                 <!-- Button to edit the note -->
                 <a href="{% url 'note_update' note.id %}" class="btn btn-primary btn-sm">Edit</a>

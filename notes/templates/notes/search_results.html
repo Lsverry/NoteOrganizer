@@ -7,7 +7,7 @@
     <input type="text" name="q" value="{{ query }}" placeholder="Search notes" class="form-control mb-2 mr-sm-2">
     <button type="submit" class="btn btn-primary mb-2">Search</button>
 </form>
-<ul class="list-group mt-3">
+<ul class="list-group mt-3 search-results">
     <!-- Loop through the search results and display each note -->
     {% for note in results %}
         <li class="list-group-item">

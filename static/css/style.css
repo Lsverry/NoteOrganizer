@@ -1,0 +1,50 @@
+/* Home page */
+/* Improve contrast for the primary button */
+.btn-primary {
+    background-color: #0056b3; /* Darker blue background for better contrast */
+    color: #ffffff; /* Ensure the text is white */
+}
+
+/* Improve contrast for the navigation bar links */
+.navbar-light .navbar-nav .nav-link {
+    color: #0056b3; /* Darker blue for better contrast */
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #003366; /* Even darker blue for hover/focus state */
+}
+
+/* My notes */
+/* Improve contrast for 'Create New Note' button */
+.btn-success {
+    color: #ffffff; /* Ensure text is white */
+    background-color: #218838; /* Darker green for better contrast */
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #19792e; /* Even darker green for hover/focus state */
+}
+
+/* Improve contrast for note links in the notes list */
+.note-link {
+    color: #0056b3 !important; /* Darker blue for better contrast */
+}
+
+.note-link:hover,
+.note-link:focus {
+    color: #003d7a !important; /* Even darker blue for hover/focus state */
+    text-decoration: underline; /* Underline text on hover/focus */
+}
+
+/* Search results */
+/* Improve contrast for search results links */
+.search-results a {
+    color: #0056b3 !important; /* Darker blue for better contrast */
+}
+
+.search-results a:hover {
+    color: #003d7a !important; /* Even darker blue for hover */
+    text-decoration: underline; /* Underline text on hover */
+}

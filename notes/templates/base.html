@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <!-- Link to Bootstrap CSS for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom CSS for improved accessibility -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Favicon links -->
+    <link rel="icon" href="{% static 'favicon/favicon16.png' %}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{% static 'favicon/favicon32.png' %}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{% static 'favicon/favicon48.png' %}" sizes="48x48" type="image/png">
     <title>{% block title %}Note Organizer{% endblock %}</title>
 </head>
 <body>

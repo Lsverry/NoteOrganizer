@@ -27,7 +27,7 @@ These user stories are also documented and tracked in the agile tool, GitHub Pro
 ### Entity Relationship Diagram
 This application uses a relational database to store user information and notes. The main models are User and Note.
 
-![Entity Relationship Diagram](assets/images/Entity%20diagram.png)
+![Entity Relationship Diagram](static/images/Entity%20diagram.png)
 
 ### Design
 - Colour Scheme
@@ -38,27 +38,27 @@ This application uses a relational database to store user information and notes.
 ### Wireframes
 1. **Home Page Wireframe**:
     - **Description**: This wireframe shows the initial structure of the home page, including the navigation bar, register button, and login button.
-    ![Home Page Wireframe](assets/images/Home%20wireframe.png)
+    ![Home Page Wireframe](static/images/Home%20wireframe.png)
 
 2. **Notes List Wireframe**:
     - **Description**: This wireframe illustrates the page where users can view a list of their notes. It includes buttons to create, edit, and delete notes.
-    ![Notes List Wireframe](assets/images/Note%20list%20wireframe.png)
+    ![Notes List Wireframe](static/images/Note%20list%20wireframe.png)
 
 3. **Create Note Wireframe**:
     - **Description**: This wireframe shows the notes creation page, with a text field for the title, a text field for the content and a save button.
-    ![Create Note Wireframe](assets/images/Create%20note%20wireframe.png)
+    ![Create Note Wireframe](static/images/Create%20note%20wireframe.png)
 
 3. **Edit Note Wireframe**:
     - **Description**: This wireframe shows the notes edit page, with a text field for the title, a text field for the content and a save button.
-    ![Edit Note Wireframe](assets/images/Note%20edit%20wireframe.png)
+    ![Edit Note Wireframe](static/images/Note%20edit%20wireframe.png)
 
 4. **Search Notes Wireframe**:
     - **Description**: This wireframe shows the note search page, with a text field and a button to search for notes.
-    ![Search Notes Wireframe](assets/images/search%20wireframe.png)
+    ![Search Notes Wireframe](static/images/search%20wireframe.png)
 
 5. **Note detail Wireframe**:
     - **Description**: This wireframe illustrates the notes detail page, with a button to edit it and a button to return to the notes list.
-    ![Note detail Wireframe](assets/images/Note%20detail%20wireframe.png)
+    ![Note detail Wireframe](static/images/Note%20detail%20wireframe.png)
 
 ### Screenshots
 
@@ -66,28 +66,28 @@ These are the screenshots of the finished project:
 
 1. **Home Page**
     - **Description**: This is the main page of the Note Organizer application. Users can browse to view their notes or sign up for a new account.
-    ![Home Page](assets/images/main%20screenshot.png)
+    ![Home Page](static/images/home%20page%20sc%202.png)
 2. **Notes List**
     - **Description**: This page displays a list of all notes created by the logged-in user. Users can view, edit, or delete their notes from this page.
-    ![Notes List](assets/images/Note%20List%20screenshot%202.png)
+    ![Notes List](static/images/Note%20list%20sc%202.png)
 3. **Create Note**
     - **Description**: The note creation page where users can enter a title and content for a new note. The form includes input fields for the title and content, and a save button to submit the new note.
-    ![Create note](assets/images/Create%20screenshot%202.png)
+    ![Create note](static/images/Create%20Note%20sc%202.png)
 4. **Edit Note**
     - **Description**: This page allows users to edit an existing note. It pre-fills the form with the current title and content of the note. Users can make changes and save them.
-    ![Edit note](assets/images/edit%20note%20screenshot%202.png)
-5. **Search Notes**
+    ![Edit note](static/images/Edit%20note%20sc%202.png)
+5. **Search Results**
     - **Description**: The search page enables users to search for notes by keywords. It includes a search input field and a button to initiate the search.
-    ![Search Notes](assets/images/Search%20screenshot.png)
+    ![Search Notes](static/images/search%20results%20sc%202.png)
 6. **Registration Form**
     - **Description**: The user registration form where new users can create an account by providing a username and password. It includes input fields for the required information and a submit button to complete the registration.
-    ![Registration Form](assets/images/Register%20screenshot.png)
+    ![Registration Form](static/images/Register%20screenshot.png)
 7. **Log In Form**
     - **Description**: The login form for returning users to access their accounts. It includes input fields for the username and password, along with a login button.
-    ![Log in form](assets/images/Login%20screenshot.png)
+    ![Log in form](static/images/Login%20screenshot.png)
 8. **Note Detail**
     - **Description**: This page displays the details of a specific note. Users can see the title and content of the note, and have options to edit the note or go back to the list of notes.
-    ![Note Detail](assets/images/NoteName%20screenshot.png)
+    ![Note Detail](static/images/Note%20detail%20sc%202.png)
 
 ### Design Rationale
 1. **Interface Consistency**:
@@ -137,18 +137,33 @@ These are the screenshots of the finished project:
 
 ## Testing
 ### Performance
-The performance was tested with Lighthouse in the developer tools, and the results are as follows:
+The website was tested with the Lighthouse tool from the developer tools. These are the results from the different pages:
+
+**Home Page**
+![Home Page](static/images/home%20performance%20100.png)
+
+**Note List**
+![Note List](static/images/My%20notes%20performance%20100.png)
+
+**Search Results**
+![Search Results](static/images/search%20results%20performance%2099.png)
+
+**Create Note**
+![Create Note](static/images/create%20note%20performance%20100.png)
+
+**Edit Note**
+![Edit Note](static/images/edit%20note%20performance%20100.png)
 
 ### Code Validation
 #### HTML
 The HTML code was validated using the [W3C Markup Validator](https://validator.w3.org/). The validator reported errors related to Django template tags (e.g., `{% block content %}`, `{% url 'note_list' %}`). These errors are expected and do not affect the functionality of the site as they are specific to Django's templating language.
 
 #### CSS
-No custom CSS was used in this project. All styling is provided by Bootstrap.
+The CSS code was validated using the  [(Jigsaw) validator]().
 
 #### Python
 The Python code was checked with Pylint to ensure it adheres to the coding standards. The Pylint score achieved was 10.00/10, indicating no issues were found in the code.
-![Pylint](assets/images/pylint%20rate.png)
+![Pylint](static/images/pylint%20rate.png)
 
 ### JavaScript
 This project does not include custom JavaScript.
