@@ -81,10 +81,10 @@ These are the screenshots of the finished project:
     ![Search Notes](static/images/search%20results%20sc%202.png)
 6. **Registration Form**
     - **Description**: The user registration form where new users can create an account by providing a username and password. It includes input fields for the required information and a submit button to complete the registration.
-    ![Registration Form](static/images/Register%20screenshot.png)
+    ![Registration Form](static/images/Register%20sc%202.png)
 7. **Log In Form**
     - **Description**: The login form for returning users to access their accounts. It includes input fields for the username and password, along with a login button.
-    ![Log in form](static/images/Login%20screenshot.png)
+    ![Log in form](static/images/login%20sc%202.png)
 8. **Note Detail**
     - **Description**: This page displays the details of a specific note. Users can see the title and content of the note, and have options to edit the note or go back to the list of notes.
     ![Note Detail](static/images/Note%20detail%20sc%202.png)
@@ -139,27 +139,42 @@ These are the screenshots of the finished project:
 ### Performance
 The website was tested with the Lighthouse tool from the developer tools. These are the results from the different pages:
 
-**Home Page**
+**Home Page:**
+
 ![Home Page](static/images/home%20performance%20100.png)
 
-**Note List**
+**Note List:**
+
 ![Note List](static/images/My%20notes%20performance%20100.png)
 
-**Search Results**
+**Search Results:**
+
 ![Search Results](static/images/search%20results%20performance%2099.png)
 
-**Create Note**
+**Create Note:**
+
 ![Create Note](static/images/create%20note%20performance%20100.png)
 
-**Edit Note**
+**Edit Note:**
+
 ![Edit Note](static/images/edit%20note%20performance%20100.png)
+
+**Login Page:**
+
+![Login Page](static/images/Login%20performance%20100.png)
+
+**Register Page:**
+
+![Register Page](static/images/Register%20performance%20100.png)
 
 ### Code Validation
 #### HTML
 The HTML code was validated using the [W3C Markup Validator](https://validator.w3.org/). The validator reported errors related to Django template tags (e.g., `{% block content %}`, `{% url 'note_list' %}`). These errors are expected and do not affect the functionality of the site as they are specific to Django's templating language.
 
 #### CSS
-The CSS code was validated using the  [(Jigsaw) validator]().
+The CSS code was validated using the  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/). These are the results:
+
+![Results](static/images/css%20results.png)
 
 #### Python
 The Python code was checked with Pylint to ensure it adheres to the coding standards. The Pylint score achieved was 10.00/10, indicating no issues were found in the code.
@@ -337,3 +352,4 @@ No unfixed bugs.
 
 ## Credits
 - **Acknowledgements**: Special thanks to the Django and Bootstrap communities for their excellent documentation and resources.
+- **Favicon**: [Font Awesome](https://fontawesome.com/)

@@ -48,3 +48,29 @@
     color: #003d7a !important; /* Even darker blue for hover */
     text-decoration: underline; /* Underline text on hover */
 }
+
+/* Login page */
+/* Improve contrast for the register link */
+.register-link {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.register-link:hover,
+.register-link:focus {
+    color: #003d7a;
+    text-decoration: underline;
+}
+
+/* Register page */
+/* Improve contrast for the login link */
+.login-link {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.login-link:hover,
+.lohin-link:focus {
+    color: #003d7a;
+    text-decoration: underline;
+}
