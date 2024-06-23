@@ -2,6 +2,42 @@
 
 Note Organizer is a web application designed to help users create, view, edit, and delete notes. It also includes user authentication features such as registration and login.
 
+## Table of Contents
+1. [Features](#features)
+2. [User Stories](#user-stories)
+3. [UX Design Documentation](#ux-design-documentation)
+   - [Entity Relationship Diagram](#entity-relationship-diagram)
+   - [Design](#design)
+   - [Wireframes](#wireframes)
+   - [Screenshots](#screenshots)
+   - [Design Rationale](#design-rationale)
+   - [Implementation](#implementation)
+4. [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Frameworks and Libraries](#frameworks-and-libraries)
+   - [Tools and Programs](#tools-and-programs)
+5. [Testing](#testing)
+   - [Performance](#performance)
+   - [Code Validation](#code-validation)
+   - [Automated Testing](#automated-testing)
+   - [Manual Testing](#manual-testing)
+   - [Frameworks and Tools Used](#frameworks-and-tools-used)
+   - [Running the Tests](#running-the-tests)
+   - [Test Coverage](#test-coverage)
+   - [User Stories Testing](#user-stories-testing)
+6. [Known Bugs](#known-bugs)
+   - [Resolved Bugs](#resolved-bugs)
+   - [Unfixed Bugs](#unfixed-bugs)
+7. [Deployment](#deployment)
+   - [Deployment on Heroku](#deployment-on-heroku)
+   - [Fork the Repository](#fork-the-repository)
+   - [Clone the Repository](#clone-the-repository)
+8. [Future Implementations](#future-implementations)
+9. [Credits](#credits)
+   - [Content](#content)
+   - [Media](#media)
+   - [Acknowledgements](#acknowledgements)
+
 ## Features
 - User registration and login
 - Create, view, edit, and delete notes
@@ -212,6 +248,9 @@ In addition to automated tests, the following manual tests have been performed t
 3. **Responsiveness**
    - Verification of proper display and functionality of the application on different devices and screen sizes.
    - Ensuring that navigation bar buttons are visible and functional on mobile devices.
+   - **Mobile Testing**:
+     - Verified functionality and design on various mobile devices and screen sizes.
+     - Ensured that all interactive elements are accessible and usable on touch screens.
 
 4. **Cross-Browser Testing**
    - The application was tested on different web browsers to ensure compatibility and consistent performance. Browsers tested include:
@@ -293,15 +332,34 @@ No unfixed bugs.
 
 ## Deployment
 
-### Heroku
-- The App live link is: 
-- The project was deployed to Heroku using the following steps.
+### Deployment on Heroku
+1. **Login to Heroku**:
+    Go to the [Heroku website](https://www.heroku.com/) and log in.
 
-1. Log in to Heroku and create an App.
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+2. **Create a New Application**:
+    Click on "New" and select "Create New App". Provide a unique name for your application.
+
+3. **Connect to GitHub**:
+    - Go to the "Deploy" tab.
+    - In the "Deployment method" section, select "GitHub".
+    - Connect to your GitHub account if you haven't already.
+    - Search for your repository and connect it.
+
+4. **Configure Environment Variables**:
+    - Go to the "Settings" tab.
+    - Click "Reveal Config Vars" and add the necessary environment variables:
+      ```text
+      SECRET_KEY=your_secret_key
+      DEBUG=False
+      DJANGO_SETTINGS_MODULE=your_project.settings
+      ```
+5. **Add Heroku Postgres**:
+    - Go to the "Resources" tab.
+    - In the "Add-ons" section, search for "Heroku Postgres" and add it to your application.
+
+6. **Deploy Your Application**:
+    - Go back to the "Deploy" tab.
+    - In the "Manual Deploy" section, select the branch you want to deploy (usually `main` or `master`) and click "Deploy Branch".
 
 ### Fork the Repository
 1. Log in to GitHub: Ensure you are logged in to your GitHub account.
@@ -351,5 +409,12 @@ No unfixed bugs.
 - Implement additional security features for user data protection.
 
 ## Credits
-- **Acknowledgements**: Special thanks to the Django and Bootstrap communities for their excellent documentation and resources.
-- **Favicon**: [Font Awesome](https://fontawesome.com/)
+### Content
+All content for this project was created by the developer.
+
+### Media
+No external media were used in this project.
+
+### Acknowledgements
+- Special thanks to the Django and Bootstrap communities for their excellent documentation and resources.
+- **Favicon**: The favicon used in this project is sourced from [Font Awesome](https://fontawesome.com/).
