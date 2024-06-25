@@ -1,5 +1,7 @@
 # Note Organizer
 
+![Note Organizer in different screen sizes](static/images/different%20screen%20sizes.png)
+
 Note Organizer is a web application designed to help users create, view, edit, and delete notes. It also includes user authentication features such as registration and login.
 
 ## Table of Contents
