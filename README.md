@@ -331,6 +331,7 @@ To run the automated tests, follow these steps:
 No unfixed bugs.
 
 ## Deployment
+[View the deployed project on Heroku](https://noteorganizer-97ca6970bcf3.herokuapp.com/)
 
 ### Deployment on Heroku
 1. **Login to Heroku**:
